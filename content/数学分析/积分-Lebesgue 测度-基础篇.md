@@ -1,10 +1,11 @@
-# Lebesgue 测度（基础篇）
-> [[数学分析/README|← 返回索引]]
+
+> [[数学分析|← 返回索引]]
 
 **Df 8.3.1（Lebesgue 外测度）**设 $E$ 是 $\mathbb{R}^n$ 空间中的任意子集（即 $E \subset \mathbb{R}^n$），则 $E$ 的**勒贝格外测度**记为 $m^*(E)$，其定义为：
 
 $$
-m^*(E) = \inf \left\{ \sum_{k \ge 1} |R_k| \ \bigg| \ E \subset \bigcup_{k \ge 1} R_k, \ R_k \text{ 为方体} \right\}$$
+m^*(E) = \inf \left\{ \sum_{k \ge 1} |R_k| \ \bigg| \ E \subset \bigcup_{k \ge 1} R_k, \ R_k \text{ 为方体} \right\}
+$$
 
 **Thm 8.3.1（Lebesugue 外测度的性质）**
 
@@ -12,22 +13,26 @@ m^*(E) = \inf \left\{ \sum_{k \ge 1} |R_k| \ \bigg| \ E \subset \bigcup_{k \ge 1
 2. $\sigma$-次可加性：对任意可数个集合序列 $\{E_k\}_{k=1}^{\infty}$，有：
 
 $$
-m^*\left( \bigcup_{k \ge 1} E_k \right) \le \sum_{k=1}^{\infty} m^*(E_k)$$
+m^*\left( \bigcup_{k \ge 1} E_k \right) \le \sum_{k=1}^{\infty} m^*(E_k)
+$$
 
 证明：对每一个集合 $E_k$，都存在一列方体 $\{R_{k,j}\}_{j=1}^{\infty}$ 能够覆盖 $E_k$，即：
 
 $$
-E_k \subset \bigcup_{j=1}^{\infty} R_{k,j}$$
+E_k \subset \bigcup_{j=1}^{\infty} R_{k,j}
+$$
 
 并且这些方体的体积之和满足以下不等式（放大一个级数项）：
 
 $$
-\sum_{j=1}^{\infty} |R_{k,j}| < m^*(E_k) + \frac{\varepsilon}{2^k}$$
+\sum_{j=1}^{\infty} |R_{k,j}| < m^*(E_k) + \frac{\varepsilon}{2^k}
+$$
 
 求和可得
 
 $$
-m^*\left( \bigcup_{k=1}^{\infty} E_k \right) \le \sum_{k=1}^{\infty} m^*(E_k) + \varepsilon$$
+m^*\left( \bigcup_{k=1}^{\infty} E_k \right) \le \sum_{k=1}^{\infty} m^*(E_k) + \varepsilon
+$$
 
 **Df 8.3.2（Lebesgue 内测度）** 对集合 $E\in \mathbb{R}^n$，设矩形 $R$ 满足 $E\subset R$，则 $E$ 的 Lebesgue 内测度定义为 $m_{*}(E)=\lvert R \rvert-m^*(R\setminus E)$。
 
@@ -50,7 +55,8 @@ $$
 则 $\{R_k\}\cup\{\tilde R_k\}$ 覆盖 $r_0$，故
 
 $$
-\sum|R_k|+\sum|\tilde R_k|<m^*(E)+m^*(r_0\setminus E)+\varepsilon=|r_0|+\varepsilon$$
+\sum|R_k|+\sum|\tilde R_k|<m^*(E)+m^*(r_0\setminus E)+\varepsilon=|r_0|+\varepsilon
+$$
 
 注意 $r\cap E\subset\bigcup(R_k\cap r)$，$r\setminus E\subset\bigcup(\tilde R_k\cap r)$（因 $r\setminus E\subset r_0\setminus E$），所以
 
@@ -68,14 +74,16 @@ $$
 由于 $\{R_k\}\cup\{\tilde R_k\}$ 覆盖 $r_0$，在 $r_0\setminus r$（即 $r_0$ 在 $r$ 外的部分）上的覆盖体积至少为 $|r_0\setminus r|$，故 $\sum|R_k\setminus r|+\sum|\tilde R_k\setminus r|\ge|r_0\setminus r|$。代入得
 
 $$
-m^*(r\cap E)+m^*(r\setminus E)<|r_0|+\varepsilon-|r_0\setminus r|=|r|+\varepsilon$$
+m^*(r\cap E)+m^*(r\setminus E)<|r_0|+\varepsilon-|r_0\setminus r|=|r|+\varepsilon
+$$
 
 由 $\varepsilon$ 任意性得 $m^*(r\cap E)+m^*(r\setminus E)\le|r|$；反向不等式由次可加性成立。故对矩形 $r$ 结论成立。
 
 对一般 $F$，取矩形覆盖 $\{R_k\}$ 使 $F\subset\bigcup R_k$。由已证结论及次可加性：
 
 $$
-\sum|R_k|=\sum\big(m^*(R_k\cap E)+m^*(R_k\setminus E)\big)\ge m^*(F\cap E)+m^*(F\setminus E)$$
+\sum|R_k|=\sum\big(m^*(R_k\cap E)+m^*(R_k\setminus E)\big)\ge m^*(F\cap E)+m^*(F\setminus E)
+$$
 
 两边取下确界得 $m^*(F)\ge m^*(F\cap E)+m^*(F\setminus E)$，再结合次可加性即得等式。$\square$
 
@@ -147,12 +155,14 @@ $$
 3. 先设 $\{E_k\}\subset\mathcal{L}(\mathbb{R}^n)$ 两两不交，令 $E=\bigcup_{k=1}^\infty E_k$。对任意 $F\subset\mathbb{R}^n$，利用 Carathéodory 条件（Thm 8.3.2）迭代可得：
 
 $$
-m^*(F)=\sum_{k=1}^N m^*(F\cap E_k)+m^*\Big(F\setminus\bigcup_{k=1}^N E_k\Big)$$
+m^*(F)=\sum_{k=1}^N m^*(F\cap E_k)+m^*\Big(F\setminus\bigcup_{k=1}^N E_k\Big)
+$$
 
 取 $F=E$ 即得 $m(E)=\sum_{k=1}^\infty m(E_k)$。令 $N\to\infty$，由 $F\setminus E\subset F\setminus\bigcup_{k=1}^N E_k$ 得：
 
 $$
-m^*(F)\ge\sum_{k=1}^\infty m^*(F\cap E_k)+m^*(F\setminus E)\ge m^*(F\cap E)+m^*(F\setminus E)$$
+m^*(F)\ge\sum_{k=1}^\infty m^*(F\cap E_k)+m^*(F\setminus E)\ge m^*(F\cap E)+m^*(F\setminus E)
+$$
 
 结合次可加性 $m^*(F)\le m^*(F\cap E)+m^*(F\setminus E)$ 即得 $m^*(F)=m^*(F\cap E)+m^*(F\setminus E)$，故 $E$ 可测。
 
@@ -169,12 +179,14 @@ $$
 *证明*：将 $E$ 分解为不交并：
 
 $$
-E = E_1 \cup \bigcup_{k=2}^{\infty} (E_k \setminus E_{k-1})$$
+E = E_1 \cup \bigcup_{k=2}^{\infty} (E_k \setminus E_{k-1})
+$$
 
 由可数可加性：
 
 $$
-m(E) = m(E_1) + \sum_{k=2}^{\infty} m(E_k \setminus E_{k-1}) = \lim_{N\to\infty} \Big[ m(E_1) + \sum_{k=2}^{N} m(E_k \setminus E_{k-1}) \Big]$$
+m(E) = m(E_1) + \sum_{k=2}^{\infty} m(E_k \setminus E_{k-1}) = \lim_{N\to\infty} \Big[ m(E_1) + \sum_{k=2}^{N} m(E_k \setminus E_{k-1}) \Big]
+$$
 
 而 $E_N = E_1 \cup \bigcup_{k=2}^{N} (E_k \setminus E_{k-1})$，故 $m(E_N) = m(E_1) + \sum_{k=2}^{N} m(E_k \setminus E_{k-1})$。因此 $m(E) = \lim_{N\to\infty} m(E_N)$。$\square$
 
@@ -199,12 +211,14 @@ $$
 由条件存在 $N$ 使 $m(E_N) < \infty$。考虑 $k \ge N$ 时的子列，令 $F_k = E_N \setminus E_k$，则 $\{F_k\}_{k=N}^{\infty}$ 单增且 $F_k \subseteq E_N$。由 Thm 8.3.6：
 
 $$
-m\Big(\bigcup_{k=N}^{\infty} F_k\Big) = \lim_{k\to\infty} m(F_k)$$
+m\Big(\bigcup_{k=N}^{\infty} F_k\Big) = \lim_{k\to\infty} m(F_k)
+$$
 
 而 $\bigcup_{k=N}^{\infty} F_k = E_N \setminus \bigcap_{k=N}^{\infty} E_k = E_N \setminus E$，且 $m(F_k) = m(E_N) - m(E_k)$（因 $E_k \subseteq E_N$ 且测度有限）。代入得：
 
 $$
-m(E_N) - m(E) = m(E_N) - \lim_{k\to\infty} m(E_k)$$
+m(E_N) - m(E) = m(E_N) - \lim_{k\to\infty} m(E_k)
+$$
 
 两边消去 $m(E_N)$（有限）即得 $m(E) = \lim_{k\to\infty} m(E_k)$。$\square$
 
