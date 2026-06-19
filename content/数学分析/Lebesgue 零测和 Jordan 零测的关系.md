@@ -11,7 +11,9 @@
 
 由于“有限”只是“可列”的一种特例，所以：
 
-$$\text{Jordan 零测} \implies \text{Lebesgue 零测}$$
+$$
+\text{Jordan 零测} \implies \text{Lebesgue 零测}
+$$
 
 但反之则不然，因为“无穷”会带来本质的变化。
 
@@ -27,7 +29,9 @@ $$\text{Jordan 零测} \implies \text{Lebesgue 零测}$$
 
 这些区间的总长度为：
 
-$$\sum_{n=1}^{\infty} \frac{\epsilon}{2^n} = \epsilon$$
+$$
+\sum_{n=1}^{\infty} \frac{\epsilon}{2^n} = \epsilon
+$$
 
 所以它是 Lebesgue 零测集。
 
@@ -50,7 +54,9 @@ $$\sum_{n=1}^{\infty} \frac{\epsilon}{2^n} = \epsilon$$
 
 如果集合 $A$ 是**紧集（Compact Set）**，即它是闭且有界的，那么两者就等价了：
 
-$$\text{对紧集 } A: \text{Lebesgue 零测} \iff \text{Jordan 零测}$$
+$$
+\text{对紧集 } A: \text{Lebesgue 零测} \iff \text{Jordan 零测}
+$$
 
 **证明直觉：**
 
