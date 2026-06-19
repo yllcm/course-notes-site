@@ -84,7 +84,8 @@ $$
 
 令 $\varphi(t) = f(a_0 + t(x - a_0))$，其中 $t \in [0, 1]$，则
 
-- $$
+-
+$$
 \varphi(1) = \varphi(0) + \frac{\varphi'(0)}{1!} + \dots + \frac{\varphi^{(m)}(0)}{m!} + \frac{\varphi^{(m+1)}(\theta)}{(m+1)!}
 $$
 

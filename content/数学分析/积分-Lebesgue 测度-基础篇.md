@@ -44,8 +44,10 @@ $$
 
 ($\Rightarrow$) 先设 $F=r$ 为矩形。取矩形 $r_0\supseteq E\cup r$。对 $\forall\varepsilon>0$，由外测度定义存在矩形列 $\{R_k\},\{\tilde R_k\}$ 使得
 
-$$E\subset\bigcup R_k,\quad r_0\setminus E\subset\bigcup\tilde R_k,\quad
-\sum|R_k|<m^*(E)+\frac\varepsilon2,\quad\sum|\tilde R_k|<m^*(r_0\setminus E)+\frac\varepsilon2$$
+$$
+E\subset\bigcup R_k,\quad r_0\setminus E\subset\bigcup\tilde R_k,\quad
+\sum|R_k|<m^*(E)+\frac\varepsilon2,\quad\sum|\tilde R_k|<m^*(r_0\setminus E)+\frac\varepsilon2
+$$
 
 >[!info] 
 >这一步的目的是把 L-可测的 $E$ 打碎成矩形，方便后面的逼近分析
