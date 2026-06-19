@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: zh-CN
-  baseUrl: yllcm.github.io/course-notes
+  baseUrl: yllcm.github.io/course-notes-site
   ignorePatterns:
     - private
     - templates
