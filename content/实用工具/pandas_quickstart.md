@@ -2,7 +2,6 @@
 
 > 用于实验数据处理（读 CSV、筛选、分组、画图）
 
----
 
 ## 1. 读取 CSV
 
@@ -15,7 +14,6 @@ print(df.shape)           # (行数, 列数)
 print(df.columns)         # 列名列表
 ```
 
----
 
 ## 2. 筛选数据
 
@@ -83,7 +81,6 @@ df.loc[:, ['lr', 'test_acc']]            # 所有行，只取 lr 和 test_acc
 df.loc[df['width'] == 256, 'lr':'test_acc']  # 行筛选 + 列范围
 ```
 
----
 
 ## 3. 排序：sort_values
 
@@ -124,7 +121,6 @@ best_per_width = df.loc[df.groupby('width')['test_acc'].idxmax()]
 print(best_per_width[['width', 'lr', 'test_acc']])
 ```
 
----
 
 ## 4. 分组统计
 
@@ -140,7 +136,6 @@ df.groupby('lr').agg({'test_acc': ['mean', 'max', 'std'],
                       'test_loss': 'mean'})
 ```
 
----
 
 ## 5. 画图（pandas + matplotlib）
 
@@ -172,7 +167,6 @@ plt.grid(True, alpha=0.3)
 plt.show()
 ```
 
----
 
 ## 6. 数据透视表
 
@@ -187,7 +181,6 @@ sns.heatmap(pivot, annot=True, fmt='.3f')
 plt.show()
 ```
 
----
 
 ## 7. 导出
 
@@ -196,7 +189,6 @@ df.to_csv('output.csv', index=False)          # 导出为 CSV
 df.to_excel('output.xlsx', index=False)       # 导出为 Excel
 ```
 
----
 
 ## 完整示例
 

@@ -2,13 +2,11 @@
 
 > 用于 AI4S 交叉实践课程实验（AutoDL 平台 + PyTorch）
 
----
 
 ## 1. 什么是 Jupyter Notebook
 
 Jupyter Notebook 是一个**交互式 Python 编程环境**，以 `.ipynb` 文件保存。它将代码、运行结果、图表、笔记文字整合在一个文档中，特别适合做实验和数据分析。
 
----
 
 ## 2. 核心概念：Cell（单元格）
 
@@ -23,7 +21,6 @@ Jupyter Notebook 是一个**交互式 Python 编程环境**，以 `.ipynb` 文�
 - 运行 Code Cell → 显示输出结果（打印、图表、tensor shape 等）。
 - 运行 Markdown Cell → 渲染为格式化文本。
 
----
 
 ## 3. 常用快捷键
 
@@ -53,7 +50,6 @@ Jupyter Notebook 是一个**交互式 Python 编程环境**，以 `.ipynb` 文�
 
 > **最重要的三个快捷键**：`Shift + Enter`（运行）、`B`（新建）、`DD`（删除）。
 
----
 
 ## 4. 在 AutoDL 上的基本操作（对应作业环境）
 
@@ -93,7 +89,6 @@ for epoch in range(epochs):
 3. 重新运行出错的 Cell（以及它之后依赖它的 Cell）
 4. 如果变量状态乱掉了 → **Kernel → Restart Kernel and Clear All Outputs**（`0` + `0`），然后从头开始运行
 
----
 
 ## 5. 在 Notebook 中画图
 
@@ -127,7 +122,6 @@ for epoch in range(epochs):
 
 最后用一个 Cell 统一画图，避免每步都画。
 
----
 
 ## 6. 常见问题
 
@@ -158,7 +152,6 @@ for epoch in range(epochs):
 torch.save(model.state_dict(), 'model.pth')
 ```
 
----
 
 ## 7. Notebook 与 `.py` 文件的转换
 
@@ -169,7 +162,6 @@ torch.save(model.state_dict(), 'model.pth')
 
 > 交作业时通常提交 `.ipynb` 文件。
 
----
 
 ## 8. 作业中的典型 Notebook 结构
 
@@ -184,7 +176,6 @@ Cell 7:  画图（loss 曲线 + accuracy 曲线）
 Cell 8:  测试集评估，打印最终准确率
 ```
 
----
 
 ## 参考快捷键速查表
 

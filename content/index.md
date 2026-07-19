@@ -6,7 +6,6 @@ title: 大学课程笔记
 
 本网站收录了我在清华大学修读的部分核心课程笔记，使用 Markdown 编写并嵌入 LaTeX 数学公式。笔记由 [Quartz](https://quartz.jzhao.xyz/) 构建发布。
 
----
 
 ## 课程
 
@@ -19,7 +18,6 @@ title: 大学课程笔记
 ### [[大学物理（英）/README|大学物理（英） （University Physics）]]
 力学、刚体、流体、狭义相对论、振动与波、热学（英文授课）
 
----
 
 ## 交叉实践
 
@@ -29,7 +27,6 @@ AI for Science 深度学习课程笔记：基础理论 → 核心组件 → 网�
 ### [[实用工具/README|实用工具]]
 Jupyter / Matplotlib / Pandas / LaTeX / TensorBoard 等科研工具教程
 
----
 
 ## 格式说明
 

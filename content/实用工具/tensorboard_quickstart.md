@@ -2,7 +2,6 @@
 
 > 用于可视化训练过程中的 loss、accuracy、模型图、梯度分布等。
 
----
 
 ## 1. 安装与启动
 
@@ -25,7 +24,6 @@ tensorboard --logdir runs --port 6006
 
 然后浏览器打开 `http://localhost:6006`。
 
----
 
 ## 2. 记录标量（Loss / Accuracy）
 
@@ -47,7 +45,6 @@ writer.close()
 
 `Loss/train` 中的 `/` 会在 TensorBoard 中自动分组为 `Loss` 下的 `train` 和 `test` 子条目。
 
----
 
 ## 3. 记录多个实验对比
 
@@ -71,7 +68,6 @@ tensorboard --logdir runs
 
 所有 `runs/` 下的子目录会自动列在左侧，可勾选对比。
 
----
 
 ## 4. 记录超参数（HParams）
 
@@ -97,7 +93,6 @@ writer.close()
 
 TensorBoard 的 HPARAMS 面板会生成超参数与性能指标的表格和散点图，便于分析哪些超参数影响最大。
 
----
 
 ## 5. 记录模型结构（Graph）
 
@@ -108,7 +103,6 @@ writer.add_graph(model, dummy_input)
 
 TensorBoard 的 GRAPHS 面板会显示模型的计算图，每个节点代表一层或一个算子。
 
----
 
 ## 6. 记录梯度与权值分布（Histogram）
 
@@ -121,7 +115,6 @@ for name, param in model.named_parameters():
 
 TensorBoard 的 HISTOGRAMS 面板会随时间展示权值和梯度的分布变化——梯度消失时分布会越来越窄，梯度爆炸时会发散。
 
----
 
 ## 7. 记录图像
 
@@ -133,7 +126,6 @@ writer.add_image('input', img_tensor, step)
 writer.add_images('batch', imgs_tensor, step)
 ```
 
----
 
 ## 8. 完整的训练模板
 
@@ -167,7 +159,6 @@ for epoch in range(20):
 writer.close()
 ```
 
----
 
 ## 9. 常见问题
 

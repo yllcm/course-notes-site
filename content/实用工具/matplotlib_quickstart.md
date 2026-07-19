@@ -2,7 +2,6 @@
 
 > 用于实验画图（loss 曲线、accuracy 曲线、对比图）
 
----
 
 ## 1. 基本画图
 
@@ -19,7 +18,6 @@ plt.title('Test Accuracy')
 plt.show()               # 显示
 ```
 
----
 
 ## 2. 画 loss 曲线
 
@@ -34,7 +32,6 @@ plt.grid(True, alpha=0.3) # 显示网格线（透明度 30%，更淡雅）
 plt.show()
 ```
 
----
 
 ## 3. 同时画 loss 和 acc（子图）
 
@@ -60,7 +57,6 @@ plt.savefig('training_curves.png', dpi=150) # 保存
 plt.show()
 ```
 
----
 
 ## 4. 超参对比图
 
@@ -79,7 +75,6 @@ plt.xscale('log')          # lr 通常用对数坐标
 plt.show()
 ```
 
----
 
 ## 5. 常用格式控制
 
@@ -95,7 +90,6 @@ plt.plot(x, y,
 
 常用颜色：`'blue'` / `'red'` / `'green'` / `'orange'` / `'purple'` / `'#ff6600'`
 
----
 
 ## 6. 保存图片
 
@@ -108,7 +102,6 @@ plt.savefig('filename.png', dpi=150, bbox_inches='tight')
 
 > **必须先 savefig 再 show**，否则 show 之后画布会清空，保存的是空白图。
 
----
 
 ## 7. 画多条线时自动配色
 
@@ -123,7 +116,6 @@ plt.legend()
 plt.show()
 ```
 
----
 
 ## 完整示例
 
@@ -158,7 +150,6 @@ plt.savefig('experiment_results.png', dpi=150)
 plt.show()
 ```
 
----
 
 ## 8. 网格线 plt.grid
 
@@ -171,7 +162,6 @@ plt.grid(False)              # 隐藏网格
 
 网格线能帮助你更准确地读出曲线在纵轴/横轴上的位置，适合放在实验报告中展示。
 
----
 
 ## 9. 自动调整布局 tight_layout
 
@@ -192,7 +182,6 @@ plt.show()
 
 没有 `tight_layout` 时，左边子图的 y 轴标签和右边子图的 x 轴标签可能会挤在一起。加上后自动留出空间。通常在 `savefig` 和 `show` 之前调一次。
 
----
 
 ## 10. 图例 legend
 
