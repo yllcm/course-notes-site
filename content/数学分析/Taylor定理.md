@@ -69,8 +69,8 @@ $$
 	- **偏导数算子**: 记 $D^\alpha f(x_0)$ 为在点 $x_0 = (x_1^0, \dots, x_n^0)$ 处计算的偏导数：
     
     $$
-    \left. \frac{\partial^{|\alpha|} f(x)}{\partial x_1^{\alpha_1} \partial x_2^{\alpha_2} \dots \partial x_n^{\alpha_n}} \right|_{x=x_0} \triangleq \frac{\partial^{|\alpha|} f(x_0)}{\partial x^\alpha}
-    $$
+\left. \frac{\partial^{|\alpha|} f(x)}{\partial x_1^{\alpha_1} \partial x_2^{\alpha_2} \dots \partial x_n^{\alpha_n}} \right|_{x=x_0} \triangleq \frac{\partial^{|\alpha|} f(x_0)}{\partial x^\alpha}
+$$
 - 若函数 $f(x)$ 在点 $x_0$ 处拥有直到 $m$ 阶的连续偏导数，则其 $m$ 阶 Taylor 多项式 $T_m(x)$ 定义为：
 
 $$
