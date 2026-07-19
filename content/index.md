@@ -26,12 +26,13 @@ title: 大学课程笔记
 ### [[AI4S交叉实践-深度学习/AI4S交叉实践-深度学习|AI4S 交叉实践 — 深度学习]]
 AI for Science 深度学习课程笔记：基础理论 → 核心组件 → 网络架构 → LLM 前沿 → 优化理论 → 工程实践
 
+### [[实用工具/README|实用工具]]
+Jupyter / Matplotlib / Pandas / LaTeX / TensorBoard 等科研工具教程
+
 ---
 
 ## 格式说明
 
-- **数学公式**：使用 `$...$`（行内）与 `$$
-...
-$$`（块级）渲染
+- **数学公式**：使用 `$...$`（行内）与 `$$...$$`（块级）渲染
 - **交叉引用**：Obsidian 风格的 `[[wikilinks]]` 链接
 - **标注框**：支持 Obsidian callout 语法（`> [!info]`、`> [!warning]` 等）
