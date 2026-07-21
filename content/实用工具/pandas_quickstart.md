@@ -31,6 +31,7 @@ df[df['lr'].round(4) == 0.1]                      # ✅ 四舍五入后比较
 
 > ⚠️ **浮点数不能用 `==` 直接比**。你的 CSV 里 lr 可能是 `0.350000000001` 而不是精确的 `0.35`。用 `abs(df['lr'] - 0.35) < 1e-4` 或 `.round(4) == 0.35` 更保险。
 
+```python
 # 多条件：用 &（且）、|（或）
 df[(df['width'] == 256) & (df['depth'] == 2)]     # width=256, depth=2
 df[(df['lr'] == 0.1) | (df['lr'] == 0.01)]        # lr=0.1 或 0.01
@@ -122,7 +123,7 @@ print(best_per_width[['width', 'lr', 'test_acc']])
 ```
 
 
-## 4. 分组统计
+## 5. 分组统计
 
 ```python
 # 按 lr 分组，计算 acc 的均值
@@ -137,7 +138,7 @@ df.groupby('lr').agg({'test_acc': ['mean', 'max', 'std'],
 ```
 
 
-## 5. 画图（pandas + matplotlib）
+## 6. 画图（pandas + matplotlib）
 
 ```python
 import matplotlib.pyplot as plt
@@ -168,7 +169,7 @@ plt.show()
 ```
 
 
-## 6. 数据透视表
+## 7. 数据透视表
 
 ```python
 # 行=lr，列=width，值=test_acc
@@ -182,7 +183,7 @@ plt.show()
 ```
 
 
-## 7. 导出
+## 8. 导出
 
 ```python
 df.to_csv('output.csv', index=False)          # 导出为 CSV
